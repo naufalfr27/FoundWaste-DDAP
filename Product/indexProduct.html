@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">      
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAALxJREFUSEvt0jGKAlEQRdHjIgTNR3ENIswuBGPB7Yix4F5UcA+TmAuzCC2wQQys/9UGAzv9zb1Vr15Hy1+nZb6vIE34IyPqYYZlOj7VRw74DgMssM4kNREFfI8fHDHG6V2CLg5X+B9+S+AhL9kg4BHL6JJ9wCf4zyZv3jPBS/CSDVoXxBAvSbKImijvj1x8h1JBiG5rWtykGkEj2WKIOTZZm2oFwetjilUGL2lRCePhP89sUCX9CtK4Wo/oDIwQHhmOKR7aAAAAAElFTkSuQmCC"/>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAL9JREFUSEvt080JwkAQhuE3PQi5e7EHBW1HvAp2IrkLKSQQrCEQCxAFazADEVYh7nzBBQ/JeTLP/G1G4i9LnJ8JiE74r0Z0AE7ANVp2EODtYAccgRZYK4gXyIFz18EcuABL4O7pxAtYrhBp+k6iiAK8kApYAC5EBQyZAXWArIDH0Lh+AdjSB0elAp/Vf01uXSmALVmavwKMuiAF2HZnWvSXswFunjegABa7B0rlFauAt+i3OGXJEzBqAtGfku/gCS9GIhmCfOLGAAAAAElFTkSuQmCC"/>
+
+    <link rel="stylesheet" href="/Product/style.css">
+    <style>
+        </style>
+    <title>Product</title>
+</head>
+<body>
+    <!-- Awal Navbar -->
+
+    <header class="header-navbar">
+        <nav class="nav-navbar">  
+            <a href="/Home/indexHome.html" class="FoundWaste">
+                <img src="Logo FoundWaste.png" class="logo-navbar">
+            </a>
+            <ul class="ul-navbar">
+                <li class="li-navbar"><a href="/Home/indexHome.html" class="a2-navbar">Home</a></li>
+                <li class="li-navbar"><a href="/Product/indexProduct.html" class="a2-navbar">Product</a></li>
+                <li class="li-navbar"><a href="/About/indexAbout.html" class="a2-navbar">About Us</a></li>  
+                <!-- icon search -->
+                <div class="container-search"> 
+                    <input checked="" class="checkbox" type="checkbox">
+                    <div class="mainbox">
+                        <div class="iconContainer">
+                            <svg viewBox="0 0 512 512" height="1em" xmlns="http://www.w3.org/2000/svg" class="search_icon"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"></path></svg>
+                        </div>
+                        <input class="search_input" placeholder="search" type="text">
+                    </div>
+                </div>
+                <!-- icon keranjang -->
+                <a href="/Keranjang/indexKeranjang.html">
+                <button data-quantity="0" class="btn-cart">
+                    <svg class="icon-cart" viewBox="0 0 24.38 30.52" height="30.52" width="24.38" xmlns="http://www.w3.org/2000/svg">
+                        <title>icon-cart</title>
+                        <path transform="translate(-3.62 -0.85)" d="M28,27.3,26.24,7.51a.75.75,0,0,0-.76-.69h-3.7a6,6,0,0,0-12,0H6.13a.76.76,0,0,0-.76.69L3.62,27.3v.07a4.29,4.29,0,0,0,4.52,4H23.48a4.29,4.29,0,0,0,4.52-4ZM15.81,2.37a4.47,4.47,0,0,1,4.46,4.45H11.35a4.47,4.47,0,0,1,4.46-4.45Zm7.67,27.48H8.13a2.79,2.79,0,0,1-3-2.45L6.83,8.34h3V11a.76.76,0,0,0,1.52,0V8.34h8.92V11a.76.76,0,0,0,1.52,0V8.34h3L26.48,27.4a2.79,2.79,0,0,1-3,2.44Zm0,0"></path>
+                    </svg>
+                    <span class="quantity"></span>
+                </button>
+                </a>
+                  <!-- icon user -->
+                <a href="/User/indexUser.html" class="tab">
+                    <svg
+                      width="104"
+                      height="100"
+                      viewBox="0 0 104 100"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                    <rect
+                      x="21.5"
+                      y="3.5"
+                      width="60"
+                      height="60"
+                      rx="30"
+                      stroke="black"
+                      stroke-width="7"
+                    ></rect>
+                    <g clip-path="url(#clip0_41_27)">
+                        <mask
+                          id="mask0_41_27"
+                          style="mask-type:luminance"
+                          maskUnits="userSpaceOnUse"
+                          x="0"
+                          y="61"
+                          width="104"
+                          height="52"
+                        >
+                        <path
+                            d="M0 113C0 84.2812 23.4071 61 52.1259 61C80.706 61 104 84.4199 104 113H0Z"
+                            fill="white"
+                        ></path>
+                        </mask>
+                        <g mask="url(#mask0_41_27)">
+                          <path
+                            d="M-7 113C-7 80.4152 19.4152 54 52 54H52.2512C84.6973 54 111 80.3027 111 112.749H97C97 88.0347 76.9653 68 52.2512 68H52C27.1472 68 7 88.1472 7 113H-7ZM-7 113C-7 80.4152 19.4152 54 52 54V68C27.1472 68 7 88.1472 7 113H-7ZM52.2512 54C84.6973 54 111 80.3027 111 112.749V113H97V112.749C97 88.0347 76.9653 68 52.2512 68V54Z"
+                            fill="black"
+                          ></path>
+                        </g>
+                    </g>
+                      <defs>
+                        <clipPath id="clip0_41_27">
+                          <rect
+                            width="104"
+                            height="39"
+                            fill="white"
+                            transform="translate(0 61)"
+                          ></rect>
+                        </clipPath>
+                      </defs>
+                    </svg>
+                </a>                
+            </ul>
+            <div class="off-screen-menu">
+                <ul class="off-screen-menu_list">
+                   <li> <a href="#" class="FoundWaste">
+                        <img src="Logo FoundWaste.png" class="logo-navbar">
+                    </a></li>
+                    <li><a href="/Home/indexHome.html">Home</a></li>
+                    <li><a href="/Product/indexProduct.html">Product</a></li>
+                    <li><a href="/About/indexAbout.html">About Us</a></li>
+                    <li><a href="/Keranjang/indexKeranjang.html">Cart</a></li>
+                    <li><a href="/User/indexUser.html">User</a></li>
+                </ul>
+            </div>
+            <div class="ham-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>                
+    </header>
+
+    <!-- Akhir Navbar -->
+
+
+    <!-- Awal Content -->
+    
+    <div class="main-content">
+        <section class="background-content">
+            <div class="hero-content">
+                <h1 class="main-title">JANGAN SAMPAI MENJADI</h1>
+                <h1 class="main-title">SAMPAH, AYO DAUR ULANG!</h1>
+            </div>
+        </section>
+    
+        <div class="product">PRODUCT</div>
+        <div class="background"></div>
+        <div class="limbah-kelapa">LIMBAH KELAPA</div>
+    
+        <div class="container-14">
+            <div class="container-9">
+                <div class="product-image"></div>
+                <div class="limbah-kelapa-6">LIMBAH KELAPA</div>
+                <span class="rp-5000">Rp5.000</span>
+            </div>
+            <div class="container-30">
+                <div class="product-image"></div>
+                <div class="limbah-kelapa-1">LIMBAH KELAPA</div>
+                <span class="rp-50001">Rp5.000</span>
+            </div>
+            <div class="container-29">
+                <div class="product-image"></div>   
+                <div class="limbah-kelapa-2">LIMBAH KELAPA</div>
+                <span class="rp-50002">Rp5.000</span>
+            </div>
+            <div class="container-4">
+                <div class="product-image"></div>
+                <div class="limbah-kelapa-3">LIMBAH KELAPA</div>
+                <span class="rp-50003">Rp5.000</span>
+            </div>
+            <div class="container-12">
+                <div class="product-image"></div>
+                <div class="limbah-kelapa-4">LIMBAH KELAPA</div>
+                <span class="rp-50004">Rp5.000</span>
+            </div>
+            <div class="container-2">
+                <div class="product-image"></div>
+                <div class="limbah-kelapa-5">LIMBAH KELAPA</div>
+                <span class="rp-50005">Rp5.000</span>
+            </div>
+        </div>
+        <div id="read-more" class="tampilkan-semua">Tampilkan semua</div>
+            <div id="additional-content" style="display: none;">
+        <div class="container-14">
+            <div class="container-9">
+                <div class="product-image"></div>
+                <div class="limbah-kelapa-6">LIMBAH KELAPA</div>
+                <span class="rp-5000">Rp5.000</span>
+            </div>
+            <div class="container-30">
+                <div class="product-image"></div>
+                <div class="limbah-kelapa-1">LIMBAH KELAPA</div>
+                <span class="rp-50001">Rp5.000</span>
+            </div>
+            <div class="container-29">
+                <div class="product-image"></div>   
+                <div class="limbah-kelapa-2">LIMBAH KELAPA</div>
+                <span class="rp-50002">Rp5.000</span>
+            </div>
+            <div class="container-4">
+                <div class="product-image"></div>
+                <div class="limbah-kelapa-3">LIMBAH KELAPA</div>
+                <span class="rp-50003">Rp5.000</span>
+            </div>
+            <div class="container-12">
+                <div class="product-image"></div>
+                <div class="limbah-kelapa-4">LIMBAH KELAPA</div>
+                <span class="rp-50004">Rp5.000</span>
+            </div>
+            <div class="container-2">
+                <div class="product-image"></div>
+                <div class="limbah-kelapa-5">LIMBAH KELAPA</div>
+                <span class="rp-50005">Rp5.000</span>
+            </div>
+        </div>
+        
+    
+        <div class="container-14">
+            <div class="container-9">
+                <div class="product-image"></div>
+                <div class="limbah-kelapa-6">LIMBAH KELAPA</div>
+                <span class="rp-5000">Rp5.000</span>
+            </div>
+            <div class="container-30">
+                <div class="product-image"></div>
+                <div class="limbah-kelapa-1">LIMBAH KELAPA</div>
+                <span class="rp-50001">Rp5.000</span>
+            </div>
+            <div class="container-29">
+                <div class="product-image"></div>   
+                <div class="limbah-kelapa-2">LIMBAH KELAPA</div>
+                <span class="rp-50002">Rp5.000</span>
+            </div>
+            <div class="container-4">
+                <div class="product-image"></div>
+                <div class="limbah-kelapa-3">LIMBAH KELAPA</div>
+                <span class="rp-50003">Rp5.000</span>
+            </div>
+            <div class="container-12">
+                <div class="product-image"></div>
+                <div class="limbah-kelapa-4">LIMBAH KELAPA</div>
+                <span class="rp-50004">Rp5.000</span>
+            </div>
+            <div class="container-2">
+                <div class="product-image"></div>
+                <div class="limbah-kelapa-5">LIMBAH KELAPA</div>
+                <span class="rp-50005">Rp5.000</span>
+            </div>
+        </div>
+    </div>
+    </div>
+       
+        
+        <div class="background-1">
+            <div class="limbah-kayu-6">LIMBAH KAYU</div>
+            <div class="container-20">
+                <div class="container-17">
+                    <div class="product-image-1"></div>
+                    <div class="limbah-kayu">LIMBAH KAYU</div>
+                    <span class="rp-50006">Rp5.000</span>
+                </div>
+                <div class="container-28">
+                    <div class="product-image-1"></div>
+                    <div class="limbah-kayu-1">LIMBAH KAYU</div>
+                    <span class="rp-50007">Rp5.000</span>
+                </div>
+                <div class="container-16">
+                    <div class="product-image-1"></div>
+                    <div class="limbah-kayu-2">LIMBAH KAYU</div>
+                    <span class="rp-50008">Rp5.000</span>
+                </div>
+                <div class="container-13">
+                    <div class="product-image-1"></div>
+                    <div class="limbah-kayu-3">LIMBAH KAYU</div>
+                    <span class="rp-50009">Rp5.000</span>
+                </div>
+                <div class="container-22">
+                    <div class="product-image-1"></div>
+                    <div class="limbah-kayu-4">LIMBAH KAYU</div>
+                    <span class="rp-500010">Rp5.000</span>
+                </div>
+                <div class="container-19">
+                    <div class="product-image-1"></div>
+                    <div class="limbah-kayu-5">LIMBAH KAYU</div>
+                    <span class="rp-500011">Rp5.000</span>
+                </div>
+            </div>
+    
+            <div id="read-more2" class="tampilkan-semua-1">Tampilkan semua</div>
+            <div id="additional-content2" style="display: none;">
+                <div class="container-20">
+                    <div class="container-17">
+                        <div class="product-image-1"></div>
+                        <div class="limbah-kayu">LIMBAH KAYU</div>
+                        <span class="rp-50006">Rp5.000</span>
+                    </div>
+                    <div class="container-28">
+                        <div class="product-image-1"></div>
+                        <div class="limbah-kayu-1">LIMBAH KAYU</div>
+                        <span class="rp-50007">Rp5.000</span>
+                    </div>
+                    <div class="container-16">
+                        <div class="product-image-1"></div>
+                        <div class="limbah-kayu-2">LIMBAH KAYU</div>
+                        <span class="rp-50008">Rp5.000</span>
+                    </div>
+                    <div class="container-13">
+                        <div class="product-image-1"></div>
+                        <div class="limbah-kayu-3">LIMBAH KAYU</div>
+                        <span class="rp-50009">Rp5.000</span>
+                    </div>
+                    <div class="container-22">
+                        <div class="product-image-1"></div>
+                        <div class="limbah-kayu-4">LIMBAH KAYU</div>
+                        <span class="rp-500010">Rp5.000</span>
+                    </div>
+                    <div class="container-19">
+                        <div class="product-image-1"></div>
+                        <div class="limbah-kayu-5">LIMBAH KAYU</div>
+                        <span class="rp-500011">Rp5.000</span>
+                    </div>
+                </div>
+    
+                <div class="container-20">
+                    <div class="container-17">
+                        <div class="product-image-1"></div>
+                        <div class="limbah-kayu">LIMBAH KAYU</div>
+                        <span class="rp-50006">Rp5.000</span>
+                    </div>
+                    <div class="container-28">
+                        <div class="product-image-1"></div>
+                        <div class="limbah-kayu-1">LIMBAH KAYU</div>
+                        <span class="rp-50007">Rp5.000</span>
+                    </div>
+                    <div class="container-16">
+                        <div class="product-image-1"></div>
+                        <div class="limbah-kayu-2">LIMBAH KAYU</div>
+                        <span class="rp-50008">Rp5.000</span>
+                    </div>
+                    <div class="container-13">
+                        <div class="product-image-1"></div>
+                        <div class="limbah-kayu-3">LIMBAH KAYU</div>
+                        <span class="rp-50009">Rp5.000</span>
+                    </div>
+                    <div class="container-22">
+                        <div class="product-image-1"></div>
+                        <div class="limbah-kayu-4">LIMBAH KAYU</div>
+                        <span class="rp-500010">Rp5.000</span>
+                    </div>
+                    <div class="container-19">
+                        <div class="product-image-1"></div>
+                        <div class="limbah-kayu-5">LIMBAH KAYU</div>
+                        <span class="rp-500011">Rp5.000</span>
+                    </div>
+                </div>
+        </div>
+        
+        <div class="background-2">
+            <div class="limbah-kertas-6">LIMBAH KERTAS</div>
+            <div class="container-18">
+                <div class="container-15">
+                    <div class="product-image-2"></div>
+                    <div class="limbah-kertas">LIMBAH KERTAS</div>
+                    <span class="rp-500012">Rp5.000</span>
+                </div>
+                <div class="container-10">
+                    <div class="product-image-2"></div>
+                    <div class="limbah-kertas-1">LIMBAH KERTAS</div>
+                    <span class="rp-500013">Rp5.000</span>
+                </div>
+                <div class="container-24">
+                    <div class="product-image-2"></div>
+                    <div class="limbah-kertas-2">LIMBAH KERTAS</div>
+                    <span class="rp-500014">Rp5.000</span>
+                </div>
+                <div class="container-23">
+                    <div class="product-image-2"></div>
+                    <div class="limbah-kertas-3">LIMBAH KERTAS</div>
+                    <span class="rp-500015">Rp5.000</span>
+                </div>
+                <div class="container-25">
+                    <div class="product-image-2"></div>
+                    <div class="limbah-kertas-4">LIMBAH KERTAS</div>
+                    <span class="rp-500016">Rp5.000</span>
+                </div>
+                <div class="container-5">
+                    <div class="product-image-2"></div>
+                    <div class="limbah-kertas-5">LIMBAH KERTAS</div>
+                    <span class="rp-500017">Rp5.000</span>
+                </div>
+            </div>
+    
+            <div id="read-more3"class="tampilkan-semua-3">Tampilkan semua</div>
+            <div id="additional-content3" style="display: none;">
+                <div class="container-18">
+                    <div class="container-15">
+                        <div class="product-image-2"></div>
+                        <div class="limbah-kertas">LIMBAH KERTAS</div>
+                        <span class="rp-500012">Rp5.000</span>
+                    </div>
+                    <div class="container-10">
+                        <div class="product-image-2"></div>
+                        <div class="limbah-kertas-1">LIMBAH KERTAS</div>
+                        <span class="rp-500013">Rp5.000</span>
+                    </div>
+                    <div class="container-24">
+                        <div class="product-image-2"></div>
+                        <div class="limbah-kertas-2">LIMBAH KERTAS</div>
+                        <span class="rp-500014">Rp5.000</span>
+                    </div>
+                    <div class="container-23">
+                        <div class="product-image-2"></div>
+                        <div class="limbah-kertas-3">LIMBAH KERTAS</div>
+                        <span class="rp-500015">Rp5.000</span>
+                    </div>
+                    <div class="container-25">
+                        <div class="product-image-2"></div>
+                        <div class="limbah-kertas-4">LIMBAH KERTAS</div>
+                        <span class="rp-500016">Rp5.000</span>
+                    </div>
+                    <div class="container-5">
+                        <div class="product-image-2"></div>
+                        <div class="limbah-kertas-5">LIMBAH KERTAS</div>
+                        <span class="rp-500017">Rp5.000</span>
+                    </div>
+                </div>
+                
+                <div class="container-18">
+                    <div class="container-15">
+                        <div class="product-image-2"></div>
+                        <div class="limbah-kertas">LIMBAH KERTAS</div>
+                        <span class="rp-500012">Rp5.000</span>
+                    </div>
+                    <div class="container-10">
+                        <div class="product-image-2"></div>
+                        <div class="limbah-kertas-1">LIMBAH KERTAS</div>
+                        <span class="rp-500013">Rp5.000</span>
+                    </div>
+                    <div class="container-24">
+                        <div class="product-image-2"></div>
+                        <div class="limbah-kertas-2">LIMBAH KERTAS</div>
+                        <span class="rp-500014">Rp5.000</span>
+                    </div>
+                    <div class="container-23">
+                        <div class="product-image-2"></div>
+                        <div class="limbah-kertas-3">LIMBAH KERTAS</div>
+                        <span class="rp-500015">Rp5.000</span>
+                    </div>
+                    <div class="container-25">
+                        <div class="product-image-2"></div>
+                        <div class="limbah-kertas-4">LIMBAH KERTAS</div>
+                        <span class="rp-500016">Rp5.000</span>
+                    </div>
+                    <div class="container-5">
+                        <div class="product-image-2"></div>
+                        <div class="limbah-kertas-5">LIMBAH KERTAS</div>
+                        <span class="rp-500017">Rp5.000</span>
+                    </div>
+                </div>
+        </div>
+        
+    
+        <div class="background-2">
+            <div class="limbah-kertas-6">HASIL OLAHAN RUMAHAN</div>
+            <div class="container-18">
+                <div class="container-31">
+                    <div class="product-image-3"></div>
+                    <div class="tempat-tisu">TEMPAT TISU</div>
+                    <span class="rp-18000">Rp18.000</span>
+                </div>
+                <div class="container-32">
+                    <div class="product-image-4"></div>
+                    <div class="lampu-tempurung-kelapa">HIASAN LAMPU</div>
+                    <span class="rp-20000">Rp20.000</span>
+                </div>
+                <div class="container-33">
+                    <div class="product-image-5"></div>
+                    <div class="tempat-tisu-biru">PERALATAN DAPUR</div>
+                    <span class="rp-10000">Rp10.000</span>
+                </div>
+                <div class="container-34">
+                    <div class="product-image-6"></div>
+                    <div class="tempat-tisu">TEMPAT SABUN</div>
+                    <span class="rp-15000">Rp15.000</span>
+                </div>
+                <div class="container-35">
+                    <div class="product-image-7"></div>
+                    <div class="gelas-tempurung-kelapa">GANTUNGAN KUNCI</div>
+                    <span class="rp-8000">Rp8.000</span>
+                </div>
+                <div class="container-36">
+                    <div class="product-image-8"></div>
+                    <div class="gelas-tempurung-kelapa">SIKAT GIGI</div>
+                    <span class="rp-9000">Rp9.000</span>
+                </div>
+            </div>
+            <div id="read-more4" class="tampilkan-semua-4">Tampilkan semua</div>
+            <div id="additional-content4" style="display: none;">
+            
+                <div class="container-18">
+                    <div class="container-31">
+                        <div class="product-image-3"></div>
+                        <div class="tempat-tisu">TEMPAT TISU</div>
+                        <span class="rp-18000">Rp18.000</span>
+                    </div>
+                    <div class="container-32">
+                        <div class="product-image-4"></div>
+                        <div class="lampu-tempurung-kelapa">HIASAN LAMPU</div>
+                        <span class="rp-20000">Rp20.000</span>
+                    </div>
+                    <div class="container-33">
+                        <div class="product-image-5"></div>
+                        <div class="tempat-tisu-biru">PERALATAN DAPUR</div>
+                        <span class="rp-10000">Rp10.000</span>
+                    </div>
+                    <div class="container-34">
+                        <div class="product-image-6"></div>
+                        <div class="tempat-tisu">TEMPAT SABUN</div>
+                        <span class="rp-15000">Rp15.000</span>
+                    </div>
+                    <div class="container-35">
+                        <div class="product-image-7"></div>
+                        <div class="gelas-tempurung-kelapa">GANTUNGAN KUNCI</div>
+                        <span class="rp-8000">Rp8.000</span>
+                    </div>
+                    <div class="container-36">
+                        <div class="product-image-8"></div>
+                        <div class="gelas-tempurung-kelapa">SIKAT GIGI</div>
+                        <span class="rp-9000">Rp9.000</span>
+                    </div>
+                </div>
+    
+                <div class="container-18">
+                    <div class="container-31">
+                        <div class="product-image-3"></div>
+                        <div class="tempat-tisu">TEMPAT TISU</div>
+                        <span class="rp-18000">Rp18.000</span>
+                    </div>
+                    <div class="container-32">
+                        <div class="product-image-4"></div>
+                        <div class="lampu-tempurung-kelapa">HIASAN LAMPU</div>
+                        <span class="rp-20000">Rp20.000</span>
+                    </div>
+                    <div class="container-33">
+                        <div class="product-image-5"></div>
+                        <div class="tempat-tisu-biru">PERALATAN DAPUR</div>
+                        <span class="rp-10000">Rp10.000</span>
+                    </div>
+                    <div class="container-34">
+                        <div class="product-image-6"></div>
+                        <div class="tempat-tisu">TEMPAT SABUN</div>
+                        <span class="rp-15000">Rp15.000</span>
+                    </div>
+                    <div class="container-35">
+                        <div class="product-image-7"></div>
+                        <div class="gelas-tempurung-kelapa">GANTUNGAN KUNCI</div>
+                        <span class="rp-8000">Rp8.000</span>
+                    </div>
+                    <div class="container-36">
+                        <div class="product-image-8"></div>
+                        <div class="gelas-tempurung-kelapa">SIKAT GIGI</div>
+                        <span class="rp-9000">Rp9.000</span>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+    <!-- Akhir Content -->
+
+
+    <!-- Awal Footer -->
+
+    <footer>
+        <div class="label-footer">
+            <h4>FoundWaste</h4>
+        </div>
+        <img src="2.png" class="logo-footer">
+        <div class="footer-column">
+            <p><strong>FoundWaste</strong></p>
+            <a href="/Product/indexProduct.html"><p>Product</p></a>
+            <a href="/Keranjang/indexKeranjang.html"><p>Keranjang</p></a>
+            <a href="/About/indexAbout.html"><p>About Us</p></a>
+        </div>
+        <div class="footer-column">
+            <p><strong>Informasi</strong></p>
+            <a href="bantuan"><p>Bantuan</p></a>
+            <a href="kebijakan-privasi"><p>Kebijakan Privasi</p></a>
+            <a href="hubungi-kami"><p>Hubungi Kami</p></a>
+        </div>
+        <div class="footer-right">
+            <h2><strong>YOUR ECO-FRIENDLY</strong></h2>
+            <h2><strong>E-COMMERCE DESTINATION</strong></h2>
+        </div>
+    </footer>
+
+    <!-- Akhir Footer -->
+
+    <script src="/Product/script.js"></script>
+</body>
+</html>

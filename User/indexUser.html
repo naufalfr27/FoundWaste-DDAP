@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">      
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAALxJREFUSEvt0jGKAlEQRdHjIgTNR3ENIswuBGPB7Yix4F5UcA+TmAuzCC2wQQys/9UGAzv9zb1Vr15Hy1+nZb6vIE34IyPqYYZlOj7VRw74DgMssM4kNREFfI8fHDHG6V2CLg5X+B9+S+AhL9kg4BHL6JJ9wCf4zyZv3jPBS/CSDVoXxBAvSbKImijvj1x8h1JBiG5rWtykGkEj2WKIOTZZm2oFwetjilUGL2lRCePhP89sUCX9CtK4Wo/oDIwQHhmOKR7aAAAAAElFTkSuQmCC"/>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAL9JREFUSEvt080JwkAQhuE3PQi5e7EHBW1HvAp2IrkLKSQQrCEQCxAFazADEVYh7nzBBQ/JeTLP/G1G4i9LnJ8JiE74r0Z0AE7ANVp2EODtYAccgRZYK4gXyIFz18EcuABL4O7pxAtYrhBp+k6iiAK8kApYAC5EBQyZAXWArIDH0Lh+AdjSB0elAp/Vf01uXSmALVmavwKMuiAF2HZnWvSXswFunjegABa7B0rlFauAt+i3OGXJEzBqAtGfku/gCS9GIhmCfOLGAAAAAElFTkSuQmCC"/>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+    />
+    <link rel="stylesheet" href="/User/style.css" />
+    <title>User</title>
+  </head>
+  <body>
+    <!-- Awal Navbar -->
+    <header class="header-navbar">
+        <nav class="nav-navbar">  
+            <a href="/Home/indexHome.html" class="FoundWaste">
+                <img src="Logo FoundWaste.png" class="logo-navbar">
+            </a>
+            <ul class="ul-navbar">
+                <li class="li-navbar"><a href="/Home/indexHome.html" class="a2-navbar">Home</a></li>
+                <li class="li-navbar"><a href="/Product/indexProduct.html" class="a2-navbar">Product</a></li>
+                <li class="li-navbar"><a href="/About/indexAbout.html" class="a2-navbar">About Us</a></li>  
+                <!-- icon search -->
+                <div class="container-search"> 
+                    <input checked="" class="checkbox" type="checkbox">
+                    <div class="mainbox">
+                        <div class="iconContainer">
+                            <svg viewBox="0 0 512 512" height="1em" xmlns="http://www.w3.org/2000/svg" class="search_icon"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"></path></svg>
+                        </div>
+                        <input class="search_input" placeholder="search" type="text">
+                    </div>
+                </div>
+                <!-- icon keranjang -->
+                <a href="/Keranjang/indexKeranjang.html">
+                <button data-quantity="0" class="btn-cart">
+                    <svg class="icon-cart" viewBox="0 0 24.38 30.52" height="30.52" width="24.38" xmlns="http://www.w3.org/2000/svg">
+                        <title>icon-cart</title>
+                        <path transform="translate(-3.62 -0.85)" d="M28,27.3,26.24,7.51a.75.75,0,0,0-.76-.69h-3.7a6,6,0,0,0-12,0H6.13a.76.76,0,0,0-.76.69L3.62,27.3v.07a4.29,4.29,0,0,0,4.52,4H23.48a4.29,4.29,0,0,0,4.52-4ZM15.81,2.37a4.47,4.47,0,0,1,4.46,4.45H11.35a4.47,4.47,0,0,1,4.46-4.45Zm7.67,27.48H8.13a2.79,2.79,0,0,1-3-2.45L6.83,8.34h3V11a.76.76,0,0,0,1.52,0V8.34h8.92V11a.76.76,0,0,0,1.52,0V8.34h3L26.48,27.4a2.79,2.79,0,0,1-3,2.44Zm0,0"></path>
+                    </svg>
+                    <span class="quantity"></span>
+                </button>
+                </a>
+                  <!-- icon user -->
+                <a href="/User/indexUser.html" class="tab">
+                    <svg
+                      width="104"
+                      height="100"
+                      viewBox="0 0 104 100"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                    <rect
+                      x="21.5"
+                      y="3.5"
+                      width="60"
+                      height="60"
+                      rx="30"
+                      stroke="black"
+                      stroke-width="7"
+                    ></rect>
+                    <g clip-path="url(#clip0_41_27)">
+                        <mask
+                          id="mask0_41_27"
+                          style="mask-type:luminance"
+                          maskUnits="userSpaceOnUse"
+                          x="0"
+                          y="61"
+                          width="104"
+                          height="52"
+                        >
+                        <path
+                            d="M0 113C0 84.2812 23.4071 61 52.1259 61C80.706 61 104 84.4199 104 113H0Z"
+                            fill="white"
+                        ></path>
+                        </mask>
+                        <g mask="url(#mask0_41_27)">
+                          <path
+                            d="M-7 113C-7 80.4152 19.4152 54 52 54H52.2512C84.6973 54 111 80.3027 111 112.749H97C97 88.0347 76.9653 68 52.2512 68H52C27.1472 68 7 88.1472 7 113H-7ZM-7 113C-7 80.4152 19.4152 54 52 54V68C27.1472 68 7 88.1472 7 113H-7ZM52.2512 54C84.6973 54 111 80.3027 111 112.749V113H97V112.749C97 88.0347 76.9653 68 52.2512 68V54Z"
+                            fill="black"
+                          ></path>
+                        </g>
+                    </g>
+                      <defs>
+                        <clipPath id="clip0_41_27">
+                          <rect
+                            width="104"
+                            height="39"
+                            fill="white"
+                            transform="translate(0 61)"
+                          ></rect>
+                        </clipPath>
+                      </defs>
+                    </svg>
+                </a>                
+            </ul>
+            <div class="off-screen-menu">
+                <ul class="off-screen-menu_list">
+                   <li> <a href="#" class="FoundWaste">
+                        <img src="Logo FoundWaste.png" class="logo-navbar">
+                    </a></li>
+                    <li><a href="/Home/indexHome.html">Home</a></li>
+                    <li><a href="/Product/indexProduct.html">Product</a></li>
+                    <li><a href="/About/indexAbout.html">About Us</a></li>
+                    <li><a href="/Keranjang/indexKeranjang.html">Cart</a></li>
+                    <li><a href="/User/indexUser.html">User</a></li>
+                </ul>
+            </div>
+            <div class="ham-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>                
+    </header>
+
+    <!-- Awal Konten -->
+    <div class="half-circle">
+      <div class="profile-container">
+        <img src="starkam.jpg" alt="Profile Picture" class="profile-picture" />
+      </div>
+    </div>
+
+    <div class="user-content">
+      <h2>Data Pengguna</h2>
+
+      <div class="data-user">
+        <div>
+          <i class="fa fa-user"></i>
+          <span>Setarkam</span>
+        </div>
+        <div>
+          <i class="fa fa-at"></i>
+          <span>setarkam19@gmail.com</span>
+        </div>
+        <div>
+          <i class="fa fa-phone"></i>
+          <span>085559299593</span>
+        </div>
+      </div>
+      <h2 style="padding-top: 20px">Bantuan</h2>
+      <div class="data-user">
+        <div>
+          <i class="fa fa-headphones"></i>
+          <span>Customer Service</span>
+        </div>
+        <div>
+          <i class="fa fa-bullhorn"></i>
+          <span>Complain</span>
+        </div>
+      </div>
+      <h2 style="padding-top: 20px">Lainnya</h2>
+      <div class="data-user">
+        <div>
+            <a href="/Login/indexLogin.html" style="text-decoration: none;">
+            <i class="fa fa-sign-out" style="color: red;"></i>
+          <span style="color: red;">Logout</span></a>
+        </div>
+      </div>
+      <h2 style="padding-top: 20px">Ikuti Kami</h2>
+      <div>
+        <div class="data-user">
+          <div>
+            <i class="fa fa-twitter"></i>
+            <span>FoundWaste</span>
+          </div>
+          <div>
+            <i class="fa fa-instagram"></i>
+            <span>FoundWaste</span>
+          </div>
+          <div>
+            <i class="fa fa-youtube"></i>
+            <span>FoundWasteID</span>
+          </div>
+        </div>
+      </div>
+      <div class="copyright-container">
+        <i class="fa fa-copyright"></i>
+        <span>Copyright by FoundWaste</span>
+      </div>
+    </div>
+
+    <!-- Akhir Konten -->
+    <script src="/User/script.js"></script>
+    </body>
+</html>

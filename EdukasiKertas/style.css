@@ -1,0 +1,883 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{    
+    background-color: #ffffff;
+}
+
+/* Awal Navbar */
+
+.header-navbar{
+    background-color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav-navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0.5rem;
+}
+
+.FoundWaste {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo-navbar{
+    width: 150px; /* Sesuaikan ukuran logo sesuai kebutuhan */
+    height: auto;
+    margin-right: 0.5rem; 
+}
+
+.ul-navbar{
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.li-navbar{
+    margin-left: 0.5rem;
+}
+
+.a2-navbar{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s;
+    margin-right: 1rem;
+}
+
+.a2-navbar:hover{
+    color: green;
+}
+/* icon search */
+.container-search {
+    position: relative;
+    box-sizing: border-box;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+}
+
+.mainbox {
+    box-sizing: border-box;
+    position: relative;
+    width: 230px;
+    height: 40px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    background-color: rgb(0, 0, 0);
+    transition: all 0.3s ease;
+}
+
+.checkbox:focus {
+    border: none;
+    outline: none;
+}
+
+.checkbox:checked {
+    right: 10px;
+}
+
+.checkbox:checked ~ .mainbox {
+    width: 40px;
+}
+
+.checkbox:checked ~ .mainbox .search_input {
+    width: 0;
+    height: 0px;
+}
+
+.checkbox:checked ~ .mainbox .iconContainer {
+    padding-right: 8px;
+}
+
+.checkbox {
+    box-sizing: border-box;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 17px;
+    top: 5px;
+    z-index: 9;
+    cursor: pointer;
+    appearance: none;
+}
+
+.search_input {
+    box-sizing: border-box;
+    height: 100%;
+    width: 170px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding-bottom: 4px;
+    padding-left: 10px;
+    font-size: 1em;
+    color: white;
+    transition: all 0.3s ease;
+    font-family: Arial, sans-serif;
+}
+
+.search_input::placeholder {
+    color: rgba(255, 255, 255, 0.776);
+}
+
+.iconContainer {
+    box-sizing: border-box;
+    padding-top: 5px;
+    width: fit-content;
+    transition: all 0.3s ease;
+}
+
+.search_icon {
+    box-sizing: border-box;
+    fill: white;
+    font-size: 1.3em;
+}
+/* icon keranjang */
+.btn-cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    background-color: transparent;
+    position: relative;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+   
+  .icon-cart {
+    width: 24.38px;
+    height: 30.52px;
+    transition: .2s linear;
+  }
+  
+  .icon-cart path {
+    fill: rgb(0, 0, 0);
+    transition: .2s linear;
+  }
+  
+  .btn-cart:hover > .icon-cart {
+    transform: scale(1.2);
+  }
+  
+  .btn-cart:hover > .icon-cart path {
+    fill: rgb(30, 250, 1);
+  }
+  
+  .btn-cart:hover::after {
+    visibility: visible;
+    opacity: 1;
+    top: 105%;
+  }
+  
+  .quantity {
+    display: none;
+  }   
+/* icon user */
+.tab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+    background-color: rgb(255, 255, 255);
+    padding: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+  .tab:hover {
+    background-color: rgb(223, 223, 223);
+  }
+
+  /* Responsive Navbar */
+  .off-screen-menu {
+    background-color: rgb(255, 255, 255);
+    height: 100vh;
+    width: 100%;
+    max-width: 350px;
+    position: fixed;
+    top: 0;
+    right: -450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-size: 40px;
+    transition: right 0.5s ease, opacity 0.5s ease;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.off-screen-menu.active {
+    right: 0;
+}
+
+.off-screen-menu_list {
+    font-family: 'Roboto' , sans-serif;
+    font-size: 1rem;
+    list-style: none;  /* Remove bullets */
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    margin-top: 0px;
+      /* Center text */
+}
+
+.off-screen-menu_list li {
+    
+    margin-bottom: 20px;  /* Space between items */
+}
+
+.off-screen-menu_list li a {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    color: rgb(0, 0, 0);  /* Text color */
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.off-screen-menu_list li a:hover {
+    color: green;  /* Hover color */
+}
+
+.ham-menu {
+    height: 40px;
+    width: 40px;
+    margin-left: auto;
+    position: relative;
+    display: none;
+    cursor: pointer;
+}
+
+.ham-menu span{
+    height: 5px;
+    width: 100%;
+    background-color: rgb(13, 102, 42);
+    border-radius: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%, -50%);
+    transition: 0.3s ease, opacity 0.3s ease;
+}
+
+.ham-menu span:nth-child(1){
+    top: 25%;
+}
+
+.ham-menu span:nth-child(3){
+    top: 75%;
+}
+
+.ham-menu.active span:nth-child(1){
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+.ham-menu.active span:nth-child(2){
+    opacity: 0;
+}
+.ham-menu.active span:nth-child(3){
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+    .ul-navbar {
+        display: none;
+    }
+
+    .ham-menu {
+        display: block;
+    }
+}
+
+@media (min-width: 769px) {
+    .ham-menu {
+        display: none;
+    }
+}
+
+
+/* Akhir Navbar */
+
+
+/* Awal Content */
+
+.background-content {
+    background-image: url('Rectangle 2.png');
+    background-size: cover; /* Mengubah ukuran gambar untuk menutupi seluruh elemen */
+    background-position: center;
+    color: green;
+    padding: 440px 0; /* Mengurangi padding untuk memperbesar area gambar */
+    text-align: left;
+    font-weight: bolder;
+}
+
+.hero-content {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;   
+    
+}
+
+.main-title {
+    font-size: 45px;
+    font-family: 'Roboto', sans-serif;
+    margin-left: 158px;
+    text-align: left;
+    max-width: 600px;
+    font-weight: 700;    
+}
+
+.main-title2 {
+    color: white;
+}
+/* Text start */
+.paragraph {
+    padding: 50px 0; /* Tambahkan padding atas dan bawah untuk ruang */
+    margin-top: 64px;
+    font-family: 'Roboto' , sans-serif;
+    padding-left: inherit;
+    padding-right: inherit;
+}
+
+.subjudul {
+    font-size: 35px;
+    font-family: 'Roboto' , sans-serif;
+    font-weight: 700;
+    margin-bottom: 20px; /* Ruang di bawah judul */
+    margin-left: auto;
+}
+.subjudul2 {
+    font-size: 35px;
+    font-family: 'Roboto' , sans-serif;
+    font-weight: 700;
+    margin-bottom: 20px; /* Ruang di bawah judul */
+    margin-left: auto;
+}
+
+.container-content {
+    max-width: 1200px; /* Sesuaikan dengan lebar navbar */
+    margin: 0 auto;
+    padding: 0 15px; /* Opsional: tambahkan padding untuk memberi ruang di sisi kanan dan kiri */
+}
+.container-content2 {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    background-color: rgb(229, 243, 236); /* Warna background */
+    padding: 20px; /* Padding dalam kontainer */
+    padding-bottom: 5px;
+    border-radius: 20px; /* Rounding the corners */
+    box-sizing: border-box;
+       
+}
+
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.gambar-di-kiri{
+    margin-right: 20px;
+    max-width: 40%;
+    height: auto;
+}
+
+.isi {
+    font-size: 17px;
+    text-align: justify;
+    line-height: 2;
+    flex: 1;
+    min-width: 200px;
+    color: rgb(35, 35, 36);
+    
+    
+}
+
+.isi.list-content2{
+    text-align: right;
+    padding: 0;
+    list-style-position: inside;
+    font-size: 17px;
+    line-height: 2;
+   
+}
+
+.gambar-di-kanan {
+    margin-left: 35px ;
+    max-width: 450px;
+    max-height: 450px;
+    width: 100%;
+    height: auto;
+    flex-shrink: 0;
+}
+.list-content2 {
+    margin-bottom: 10px;
+    margin-left: 40px;
+    font-size: 17px;
+    text-align: justify;
+    line-height: 2;
+    color: rgb(72, 72, 73);
+}
+
+/* Responsive */
+@media (max-width: 768px ){
+    .flex-container {
+        flex-direction: column;
+    }
+
+    .gambar-di-kanan {
+        margin-left: 0;
+        margin-bottom: 15px;
+        max-width: 100%; /* Agar gambar responsif di layar kecil */
+        max-height: none; /* Menghapus batasan tinggi maksimum */
+    }
+
+
+.list-content{
+    font-size: 18px;
+    line-height: 2;
+    margin-left: 40px;
+}
+.list-content2{
+    font-size: 18px;
+    line-height: 2;
+    list-style-position: inside;
+    padding: 0;
+}
+
+.container-content2 {
+    flex-direction: column; /* Ubah tata letak ke kolom */
+    align-items: center; /* Pusatkan konten */
+    text-align: center;
+    padding: 10px;
+    padding-top: 20px;
+    
+}
+
+.image-left {
+    margin-right: 0; /* Hapus margin kanan */
+    margin-bottom: 20px; /* Tambahkan margin bawah untuk spasi antara gambar dan teks */
+    max-width: 100%; /* Sesuaikan lebar gambar */
+    height: auto;
+}
+
+.list-content2 {
+    text-align: center; /* Teks rata tengah untuk layar kecil */
+    margin-left: 0;
+}
+}
+
+/* Edukasi start */
+.edukasi{
+    max-width: 1200px; /* Sesuaikan dengan lebar navbar */
+    margin: 0 auto;
+    padding: 0 15px;
+    margin-top: 64px; 
+}
+
+.edukasi-wrapper .row1{
+    display: flex;
+    justify-content: space-between;
+}
+
+.row1 .heading-edukasi{
+    font-size: 28px;
+    font-family: 'Roboto' ,  sans-serif;
+    font-weight: bold;    
+}
+
+.row1 .label-edukasi{
+    font-family: 'Roboto' , sans-serif;
+    color: rgba(0, 0, 0, 0.747);
+    font-size: 12px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.row1 .toggle-slider i{
+    font-size: 2.5rem;
+    color: #299E63;
+    cursor: pointer;
+    margin-top: 30px; /* Sesuaikan dengan kebutuhan untuk menurunkan ikon */
+}
+
+.edukasi-wrapper .row2 {
+    display: flex;
+    flex-direction: row; /* Menampilkan kartu secara horizontal */
+    overflow-x: auto; /* Menambahkan scrolling horizontal */
+    gap: 55px; /* Mengatur jarak antar kartu */
+    padding-bottom: 20px; /* Menambahkan padding bawah untuk space */
+}
+
+.card-edukasi {
+    flex: 0 0 auto; /* Membuat kartu tidak mengecil */
+    width: 300px; /* Atur lebar kartu sesuai kebutuhan */
+    background: #ffffff;
+    border: 1px solid #dddddd; /* Membuat bingkai */
+    border-radius: 15px; /* Membuat sudut bingkai melengkung */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan */
+    overflow: hidden; /* Menghindari konten keluar dari bingkai */
+    display: flex;
+    flex-direction: column;
+    padding: 20px; /* Menambahkan padding di dalam kartu */
+    text-align: center; /* Mengatur teks menjadi rata tengah */
+    position: relative; /* Untuk positioning kotak hijau */
+    min-height: 300px; /* Memperpanjang bingkai kartu */
+    margin-right: 20px; /* Menambahkan jarak antar kartu */
+}
+
+.card-edukasi:last-child {
+    font-family: 'Roboto' , sans-serif;
+    margin-right: 0; /* Menghapus margin pada kartu terakhir */
+}
+
+.card-edukasi img {
+    max-width: 300px;
+    height: 180px;
+    object-fit: cover;
+    border-bottom: 1px solid #dddddd; /* Garis pemisah antara gambar dan konten */
+    margin-bottom: 15px;
+}
+
+.detail-edukasi {
+    flex-grow: 1; /* Membuat konten detail mengambil ruang yang tersedia */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; /* Menyebarkan konten detail */
+}
+
+.detail-edukasi .kategori {
+    font-family: 'Roboto' , sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.detail-edukasi .search {
+    background-color: #299E63; /* Warna hijau */
+    font-weight: bold;
+    font-family: 'Roboto' , sans-serif;
+    color: white; /* Warna teks putih */
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    margin-top: auto; /* Menempatkan kotak hijau di bagian bawah */
+    width: 100%; /* Membuat kotak hijau sepanjang bingkai */
+    box-sizing: border-box; /* Menghindari padding mengganggu lebar */
+}
+
+.detail-edukasi .search a {
+    text-decoration: none; /* Menghilangkan garis bawah */
+    color: white; /* Mengatur warna teks menjadi putih */
+}
+
+/* Video link */
+.video-link {
+    text-decoration: none; /* Hapus gaya default tautan */
+    color: inherit; /* Gunakan warna default teks */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.video-title {
+    font-family: 'Roboto' , sans-serif;
+    margin-top: 10px; /* Jarak antara judul video dan iframe */
+}
+
+/* SDGs Section */
+.sdgs {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    margin-top: 64px; /* Adjust as needed */
+}
+
+.sdgs-wrapper {
+    overflow: hidden;
+    position: relative;
+}
+
+.sdgs-wrapper .row1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Align items vertically in the center */
+}
+
+.row1 .title-sdgs {
+    display: flex;
+    font-family: 'Roboto' , sans-serif;
+    flex-direction: column;
+    align-items: center; /* Center align all children */
+}
+
+.title-sdgs .logo-sdgs {
+    max-width: 50%;
+    max-width: 100px; /* Ensure the logo does not exceed its container's width */
+    height: auto; /* Maintain the aspect ratio */
+    margin: 10px 0; /* Add some space around the logo */
+}
+
+.title-sdgs img {
+    max-width: 100%; /* Ensure the logo does not exceed its container's width */
+    height: auto; /* Maintain the aspect ratio */
+    margin: 10px 0; /* Add some space around the logo */
+}
+
+.row1 .heading-sdgs {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.row1 .label-sdgs {
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.sdgs-wrapper .row2-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 20px; /* Adjust as needed */
+}
+
+.row2{
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+.row2::-webkit-scrollbar {
+    display: inline;
+    animation: scroll-horizontal 10s linear infinite;
+
+}
+
+.toggle-slider.left {
+    left: 0;
+}
+
+.toggle-slider.right {
+    right: 0;
+}
+
+.sdgs-wrapper .row2 {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 20px; /* Space between cards */
+    padding: 20px 40px; /* Add padding to accommodate the chevrons */
+    scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+.card-sdgs {
+    flex: 0 0 auto; /* Prevent cards from shrinking */
+    width: 150px; /* Adjust width as needed */
+    background: #ffffff;
+    overflow: hidden; /* Prevent content overflow */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content */
+    padding: 10px; /* Padding inside cards */
+    text-align: center; /* Center text */
+}
+
+.card-sdgs img {
+    max-width: 100%;
+    height: auto;
+    border-bottom: 1px solid #dddddd; /* Divider line */
+    margin-bottom: 10px;
+}
+
+.card-sdgs p {
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 0; /* Remove default margin */
+}
+
+.toggle-slider i {
+    font-size: 2.5rem;
+    color: #299E63;
+    cursor: pointer;
+}
+
+/* Get Product Section */
+.get-product {
+    background-color: #D9D9D9; /* Mengatur warna latar belakang */
+    padding: 200px 0; /* Sesuaikan padding sesuai kebutuhan */
+    text-align: center; /* Mengatur teks menjadi rata tengah */
+    margin-top: 100px;
+}
+
+.get-product-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.get-product-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.heading-get-product {
+    font-size: 35px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #000000; /* Warna teks */
+}
+
+.search-product {
+    margin-top: 10px; /* Menambahkan jarak antara tulisan */
+}
+
+.search-product .buy-now-btn {
+    background-color: #299E63; /* Warna hijau */
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    color: white; /* Warna teks putih */
+    padding: 10px 100px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    margin-top: auto; /* Menempatkan kotak hijau di bagian bawah */
+    width: 100%; /* Membuat kotak hijau sepanjang bingkai */
+    box-sizing: border-box; /* Menghindari padding mengganggu lebar */
+    text-decoration: none; /* Menghilangkan garis bawah pada teks */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.buy-now-btn:hover {
+    transform: scale(1.05); /* Efek skala saat hover */
+}
+
+
+/* Akhir Content */
+
+/* Awal Footer */
+
+footer {
+    position: relative;
+    bottom: 0;
+    background: #344E41;
+    color: #fff;
+    display: flex;
+    justify-content: space-between; /* Align items horizontally */
+    padding: 2rem; /* Add some padding for spacing */
+}
+
+.label-footer{
+    font-family: 'Roboto',sans-serif;
+    background-color: black; /* Menambahkan latar belakang hitam */
+    color: white; /* Memastikan teks berwarna putih agar terlihat di latar belakang hitam */
+    padding: 1rem; /* Menambahkan padding untuk spasi */
+    position: absolute; /* Memposisikan secara absolut */
+    top: 0; /* Mengatur ke bagian atas */
+    left: 50%; /* Mengatur ke tengah secara horizontal */
+    transform: translateX(-50%); /* Menyelaraskan elemen secara horizontal */
+    text-align: center; /* Memusatkan teks */
+    border-radius: 5px; /* Opsional: Menambahkan sudut membulat */
+}
+
+.logo-footer {
+    width: 250px;
+    height: auto;
+    margin-left: 5rem;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 14px;
+    line-height: 2;
+    font-family: 'Roboto',sans-serif;
+}
+
+.footer-column a {
+    text-decoration: none;
+    font-family: 'Roboto' , sans-serif;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.footer-column a:hover {
+    color: green;
+}
+
+.footer-right {
+    text-align: right;
+    align-self: center;
+    margin-right: 10rem;
+}
+
+.footer-right h2 {
+    font-family: 'Roboto' , sans-serif;
+    margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .label-footer {
+        position: static;
+        transform: none;
+        margin-bottom: 1rem;
+    }
+
+    .logo-footer {
+        margin: 1rem 0;
+    }
+
+    .footer-column {
+        margin-top: 10px;
+        align-items: center;
+    }
+
+    .footer-right {
+        margin: 1rem 0;
+        margin-top: 10px;
+        text-align: center;
+    }
+}
+
+/* Akhir Footer */
+

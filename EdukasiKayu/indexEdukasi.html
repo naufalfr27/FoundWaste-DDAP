@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">      
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAALxJREFUSEvt0jGKAlEQRdHjIgTNR3ENIswuBGPB7Yix4F5UcA+TmAuzCC2wQQys/9UGAzv9zb1Vr15Hy1+nZb6vIE34IyPqYYZlOj7VRw74DgMssM4kNREFfI8fHDHG6V2CLg5X+B9+S+AhL9kg4BHL6JJ9wCf4zyZv3jPBS/CSDVoXxBAvSbKImijvj1x8h1JBiG5rWtykGkEj2WKIOTZZm2oFwetjilUGL2lRCePhP89sUCX9CtK4Wo/oDIwQHhmOKR7aAAAAAElFTkSuQmCC"/>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAL9JREFUSEvt080JwkAQhuE3PQi5e7EHBW1HvAp2IrkLKSQQrCEQCxAFazADEVYh7nzBBQ/JeTLP/G1G4i9LnJ8JiE74r0Z0AE7ANVp2EODtYAccgRZYK4gXyIFz18EcuABL4O7pxAtYrhBp+k6iiAK8kApYAC5EBQyZAXWArIDH0Lh+AdjSB0elAp/Vf01uXSmALVmavwKMuiAF2HZnWvSXswFunjegABa7B0rlFauAt+i3OGXJEzBqAtGfku/gCS9GIhmCfOLGAAAAAElFTkSuQmCC"/>
+
+    <link rel="stylesheet" href="/EdukasiKayu/style.css">
+    <style>
+        </style>
+    <title>Edukasi Kayu FoundWaste</title>
+</head>
+<body>
+    <!-- Awal Navbar -->
+
+    <header class="header-navbar">
+        <nav class="nav-navbar">  
+            <a href="/Home/indexHome.html" class="FoundWaste">
+                <img src="Logo FoundWaste.png" class="logo-navbar">
+            </a>
+            <ul class="ul-navbar">
+                <li class="li-navbar"><a href="/Home/indexHome.html" class="a2-navbar">Home</a></li>
+                <li class="li-navbar"><a href="/Product/indexProduct.html" class="a2-navbar">Product</a></li>
+                <li class="li-navbar"><a href="/About/indexAbout.html" class="a2-navbar">About Us</a></li>  
+                <!-- icon search -->
+                <div class="container-search"> 
+                    <input checked="" class="checkbox" type="checkbox">
+                    <div class="mainbox">
+                        <div class="iconContainer">
+                            <svg viewBox="0 0 512 512" height="1em" xmlns="http://www.w3.org/2000/svg" class="search_icon"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"></path></svg>
+                        </div>
+                        <input class="search_input" placeholder="search" type="text">
+                    </div>
+                </div>
+                <!-- icon keranjang -->
+                <a href="/Keranjang/indexKeranjang.html">
+                <button data-quantity="0" class="btn-cart">
+                    <svg class="icon-cart" viewBox="0 0 24.38 30.52" height="30.52" width="24.38" xmlns="http://www.w3.org/2000/svg">
+                        <title>icon-cart</title>
+                        <path transform="translate(-3.62 -0.85)" d="M28,27.3,26.24,7.51a.75.75,0,0,0-.76-.69h-3.7a6,6,0,0,0-12,0H6.13a.76.76,0,0,0-.76.69L3.62,27.3v.07a4.29,4.29,0,0,0,4.52,4H23.48a4.29,4.29,0,0,0,4.52-4ZM15.81,2.37a4.47,4.47,0,0,1,4.46,4.45H11.35a4.47,4.47,0,0,1,4.46-4.45Zm7.67,27.48H8.13a2.79,2.79,0,0,1-3-2.45L6.83,8.34h3V11a.76.76,0,0,0,1.52,0V8.34h8.92V11a.76.76,0,0,0,1.52,0V8.34h3L26.48,27.4a2.79,2.79,0,0,1-3,2.44Zm0,0"></path>
+                    </svg>
+                    <span class="quantity"></span>
+                </button>
+                </a>
+                  <!-- icon user -->
+                <a href="/User/indexUser.html" class="tab">
+                    <svg
+                      width="104"
+                      height="100"
+                      viewBox="0 0 104 100"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                    <rect
+                      x="21.5"
+                      y="3.5"
+                      width="60"
+                      height="60"
+                      rx="30"
+                      stroke="black"
+                      stroke-width="7"
+                    ></rect>
+                    <g clip-path="url(#clip0_41_27)">
+                        <mask
+                          id="mask0_41_27"
+                          style="mask-type:luminance"
+                          maskUnits="userSpaceOnUse"
+                          x="0"
+                          y="61"
+                          width="104"
+                          height="52"
+                        >
+                        <path
+                            d="M0 113C0 84.2812 23.4071 61 52.1259 61C80.706 61 104 84.4199 104 113H0Z"
+                            fill="white"
+                        ></path>
+                        </mask>
+                        <g mask="url(#mask0_41_27)">
+                          <path
+                            d="M-7 113C-7 80.4152 19.4152 54 52 54H52.2512C84.6973 54 111 80.3027 111 112.749H97C97 88.0347 76.9653 68 52.2512 68H52C27.1472 68 7 88.1472 7 113H-7ZM-7 113C-7 80.4152 19.4152 54 52 54V68C27.1472 68 7 88.1472 7 113H-7ZM52.2512 54C84.6973 54 111 80.3027 111 112.749V113H97V112.749C97 88.0347 76.9653 68 52.2512 68V54Z"
+                            fill="black"
+                          ></path>
+                        </g>
+                    </g>
+                      <defs>
+                        <clipPath id="clip0_41_27">
+                          <rect
+                            width="104"
+                            height="39"
+                            fill="white"
+                            transform="translate(0 61)"
+                          ></rect>
+                        </clipPath>
+                      </defs>
+                    </svg>
+                </a>                
+            </ul>
+            <div class="off-screen-menu">
+                <ul class="off-screen-menu_list">
+                   <li> <a href="#" class="FoundWaste">
+                        <img src="Logo FoundWaste.png" class="logo-navbar">
+                    </a></li>
+                    <li><a href="/Home/indexHome.html">Home</a></li>
+                    <li><a href="/Product/indexProduct.html">Product</a></li>
+                    <li><a href="/About/indexAbout.html">About Us</a></li>
+                    <li><a href="/Keranjang/indexKeranjang.html">Cart</a></li>
+                    <li><a href="/User/indexUser.html">User</a></li>
+                </ul>
+            </div>
+            <div class="ham-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <script src="/Home/script.js"></script>
+        </nav>                
+    </header>
+
+    <!-- Akhir Navbar -->
+
+
+    <!-- Awal Content -->
+    
+    <div class="main-content">
+        <section class="background-content">            
+                <div class="hero-content">
+                    <h1 class="main-title">LIMBAH</h1>
+                    <h1 class="main-title"><sapn class="main-title2">KAYU</sapn></h1>
+                </div>            
+        </section>    
+
+        <!-- Text start -->
+        <br>
+        <section class="paragraph">         
+            <div class="container-content">
+                <h2 class="subjudul">Manfaat Limbah Kertas</h2>
+                <div class="flex-container">
+                    <p class="isi" id="more-text-1">
+                        Limbah kayu, dengan segala potensinya, menjadi sumber beragam manfaat yang mendukung prinsip keberlanjutan. Dari pembangunan dengan bahan bangunan alternatif hingga penggunaan sebagai bahan bakar untuk pemanasan rumah, kayu limbah memberikan solusi untuk mengurangi dampak lingkungan dan memanfaatkan sumber daya alam secara bertanggung jawab. Selain itu, industri furnitur dan kerajinan kayu juga memanfaatkan kayu limbah, membantu dalam mengurangi pembalakan liar dan mengedepankan praktik penggunaan kayu yang berkelanjutan. Serpihan kayu limbah pun dapat diolah menjadi kompos, bahan untuk pembuatan kertas daur ulang, atau bahkan dicampur dengan aspal untuk pembuatan pelapis jalan. Dengan memanfaatkan limbah kayu secara efektif, kita tidak hanya mengurangi limbah padat, tetapi juga mendukung upaya untuk menciptakan ekonomi yang lebih berkelanjutan dan ramah lingkungan.</p>
+                     <img src="kayu 1.jpg" alt="Gambar daur ulang kertas" class="gambar-di-kanan">
+                </div>
+            
+                <br>
+                <br>
+                <br>
+                    <h2 class="subjudul2">Potensi Limbah Kayu Sebagai Energi Terbarukan</h2>
+                    <div class="container-content2">
+                      <img src="kayu 2.jpg" alt="deskripsi gambar" class="gambar-di-kiri">
+                        <ul class="list-content2">
+                            <li><p>Pemanasan Rumah: Potongan kayu limbah dapat digunakan sebagai bahan bakar untuk pemanasan rumah, mengurangi ketergantungan pada bahan bakar fosil.</p></li>
+                            <li><p>Energi Biomassa: Limbah kayu dapat diolah menjadi energi biomassa melalui proses pembakaran atau fermentasi, menyediakan sumber energi yang ramah lingkungan.</p></li>
+                            <li><p>Reduksi Emisi: Penggunaan energi dari limbah kayu membantu mengurangi emisi gas rumah kaca, berkontribusi pada upaya perlindungan lingkungan.</p></li>
+                            <li><p>Daur Ulang: Pemanfaatan limbah kayu untuk energi juga merupakan bentuk daur ulang yang efektif, membantu mengurangi jumlah limbah yang masuk ke tempat pembuangan akhir.</p></li>
+                        </ul>
+                    </div>
+                    <br>
+                    
+                </div>
+                <button class="read-less-btn" id="read-less-btn-1" style="display: none;">Read Less</button>
+            </div>
+        </section>
+    
+        <script src="/EdukasiKayu/script.js"></script>
+    
+    <!-- Text end --> 
+
+    <!-- Prduk Rumahan Start -->    
+    <section class="edukasi">
+        <div class="edukasi-wrapper">
+            <div class="row1">
+                <div class="tittle-edukasi">
+                    <h1 class="heading-edukasi">Hasil Olahan Rumahan</h1>
+                    <p class="label-edukasi">Berikut adalah hasil olahan limbah kayu</p>
+                </div>
+                <div class="toggle-slider left">
+                    <i class='bx bx-chevron-left-circle'></i>
+                    <i class='bx bx-chevron-right-circle' ></i>
+                </div>
+            </div>
+            <div class="row2">
+                <div class="card-edukasi">
+                    <img src="kayu 3.jpg" alt="">
+                    <div class="detail-edukasi">
+                        <div class="kategori">
+                            <p>Mainan Kapal</p>
+                        </div>
+                        <div class="search">
+                            <a href="/Product/indexProduct.html"><p>Beli Produk</p></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-edukasi">
+                    <img src="kayu 4.jpg" alt="">
+                    <div class="detail-edukasi">
+                        <div class="kategori">
+                            <p>Miniatur</p>
+                        </div>
+                        <div class="search">
+                            <a href="/Product/indexProduct.html"><p>Beli Produk</p></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-edukasi">
+                    <img src="kayu 5.jpg" alt="">
+                    <div class="detail-edukasi">
+                        <div class="kategori">
+                            <p>Dekorasi Lantai</p>
+                        </div>
+                        <div class="search">
+                            <a href="/Product/indexProduct.html"><p>Beli Produk</p></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-edukasi">
+                    <img src="kayu 6.jpg" alt="">
+                    <div class="detail-edukasi">
+                        <div class="kategori">
+                            <p>Mebel</p>
+                        </div>
+                        <div class="search">
+                            <a href="/Product/indexProduct.html"><p>Beli Produk</p></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-edukasi">
+                    <img src="kayu 7.jpg" alt="">
+                    <div class="detail-edukasi">
+                        <div class="kategori">
+                            <p>Pupuk</p>
+                        </div>
+                        <div class="search">
+                            <a href="/Product/indexProduct.html"><p>Beli Produk</p></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="/EdukasiKayu/script.js"></script>
+    </section>
+    <!-- Edukasi end --> 
+
+        <!-- SDGs start -->
+<section class="sdgs">
+    <div class="sdgs-wrapper">
+        <div class="row1">
+            <div class="title-sdgs">
+                <h1 class="heading-sdgs">Video Edukasi Cara Mengolah</h1>
+                
+                
+            </div>
+        </div>
+        
+        <div class="row2-container">
+            <div class="toggle-slider left">
+                <i class='bx bx-chevron-left'></i>                
+
+            </div>
+
+        <div class="row2">
+          
+            <a>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/ESF2ZYN3MrM?si=5L3zFl5grA7VHYBm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </a> 
+            </a>
+            <a>
+                 <iframe width="560" height="315" src="https://www.youtube.com/embed/u52tGEYJL08?si=3s3B0qAzs4Um5gI3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </a>
+            <a>
+                 <iframe width="560" height="315" src="https://www.youtube.com/embed/9fofhRQq6lI?si=5Kf2UJikwBR2E9Rp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </a>
+          
+          
+        </div>
+        <div class="toggle-slider right">
+            <i class='bx bx-chevron-right' ></i>
+                </div>
+    </div>
+    </div>
+    <script src="/EdukasiKayu/script.js"></script>
+
+</section>
+<!-- SDGs end -->
+
+<!-- Get Product Start -->
+<section class="get-product" id="get-product">
+    <div class="get-product-wrapper">
+        <div class="get-product-content">
+            <h1 class="heading-get-product">Get Your Waste Right Here!</h1>
+            <div class="search-product">
+                <a href="/Product/indexProduct.html" class="buy-now-btn">Beli Sekarang!</a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Get Product End -->
+
+    <!-- Akhir Content -->
+
+
+    <!-- Awal Footer -->
+
+    <footer>
+        <div class="label-footer">
+            <h4>FoundWaste</h4>
+        </div>
+        <img src="2.png" class="logo-footer">
+        <div class="footer-column">
+            <p><strong>FoundWaste</strong></p>
+            <a href="/Product/indexProduct.html"><p>Product</p></a>
+            <a href="/Keranjang/indexKeranjang.html"><p>Keranjang</p></a>
+            <a href="/About/indexAbout.html"><p>About Us</p></a>
+        </div>
+        <div class="footer-column">
+            <p><strong>Informasi</strong></p>
+            <a href="bantuan"><p>Bantuan</p></a>
+            <a href="kebijakan-privasi"><p>Kebijakan Privasi</p></a>
+            <a href="hubungi-kami"><p>Hubungi Kami</p></a>
+        </div>
+        <div class="footer-right">
+            <h2><strong>YOUR ECO-FRIENDLY</strong></h2>
+            <h2><strong>E-COMMERCE DESTINATION</strong></h2>
+        </div>
+    </footer>
+
+    <!-- Akhir Footer -->
+</body>
+</html>

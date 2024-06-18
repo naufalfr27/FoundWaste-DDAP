@@ -1,0 +1,437 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{    
+    background-color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Awal Navbar */
+
+.header-navbar{
+    background-color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav-navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0.5rem;
+}
+
+.FoundWaste {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo-navbar{
+    width: 150px; /* Sesuaikan ukuran logo sesuai kebutuhan */
+    height: auto;
+    margin-right: 0.5rem; 
+}
+
+.ul-navbar{
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.li-navbar{
+    margin-left: 0.5rem;
+}
+
+.a2-navbar{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s;
+    margin-right: 1rem;
+}
+
+.a2-navbar:hover{
+    color: green;
+}
+/* icon search */
+.container-search{
+    position: relative;
+    box-sizing: border-box;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+}
+
+.mainbox {
+    box-sizing: border-box;
+    position: relative;
+    width: 230px;
+    height: 40px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    background-color: rgb(0, 0, 0);
+    transition: all 0.3s ease;
+}
+
+.checkbox:focus {
+    border: none;
+    outline: none;
+}
+
+.checkbox:checked {
+    right: 10px;
+}
+
+.checkbox:checked ~ .mainbox {
+    width: 40px;
+}
+
+.checkbox:checked ~ .mainbox .search_input {
+    width: 0;
+    height: 0px;
+}
+
+.checkbox:checked ~ .mainbox .iconContainer {
+    padding-right: 8px;
+}
+
+.checkbox {
+    box-sizing: border-box;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 17px;
+    top: 5px;
+    z-index: 9;
+    cursor: pointer;
+    appearance: none;
+}
+
+.search_input {
+    box-sizing: border-box;
+    height: 100%;
+    width: 170px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding-bottom: 4px;
+    padding-left: 10px;
+    font-size: 1em;
+    color: white;
+    transition: all 0.3s ease;
+    font-family: Arial, sans-serif;
+}
+
+.search_input::placeholder {
+    color: rgba(255, 255, 255, 0.776);
+}
+
+.iconContainer {
+    box-sizing: border-box;
+    padding-top: 5px;
+    width: fit-content;
+    transition: all 0.3s ease;
+}
+
+.search_icon {
+    box-sizing: border-box;
+    fill: white;
+    font-size: 1.3em;
+}
+/* icon keranjang */
+.btn-cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    background-color: transparent;
+    position: relative;
+    margin-left: 10px;
+  }
+   
+  .icon-cart {
+    width: 24.38px;
+    height: 30.52px;
+    transition: .2s linear;
+  }
+  
+  .icon-cart path {
+    fill: rgb(0, 0, 0);
+    transition: .2s linear;
+  }
+  
+  .btn-cart:hover > .icon-cart {
+    transform: scale(1.2);
+  }
+  
+  .btn-cart:hover > .icon-cart path {
+    fill: rgb(30, 250, 1);
+  }
+  
+  .btn-cart:hover::after {
+    visibility: visible;
+    opacity: 1;
+    top: 105%;
+  }
+  
+  .quantity {
+    display: none;
+  }   
+/* icon user */
+.tab {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+    background-color: rgb(255, 255, 255);
+    padding: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+  .tab:hover {
+    background-color: rgb(223, 223, 223);
+  }
+  
+  /* Responsive Navbar */
+  .off-screen-menu {
+    background-color: rgb(255, 255, 255);
+    height: 100vh;
+    width: 100%;
+    max-width: 350px;
+    position: fixed;
+    top: 0;
+    right: -450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-size: 40px;
+    transition: right 0.5s ease, opacity 0.5s ease;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.off-screen-menu.active {
+    right: 0;
+}
+
+.off-screen-menu_list {
+    font-family: 'Roboto' , sans-serif;
+    font-size: 1rem;
+    list-style: none;  /* Remove bullets */
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    margin-top: 0px;
+      /* Center text */
+}
+
+.off-screen-menu_list li {
+    
+    margin-bottom: 20px;  /* Space between items */
+}
+
+.off-screen-menu_list li a {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    color: rgb(0, 0, 0);  /* Text color */
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.off-screen-menu_list li a:hover {
+    color: green;  /* Hover color */
+}
+
+.ham-menu {
+    height: 40px;
+    width: 40px;
+    margin-left: auto;
+    position: relative;
+    display: none;
+    cursor: pointer;
+}
+
+.ham-menu span{
+    height: 5px;
+    width: 100%;
+    background-color: rgb(13, 102, 42);
+    border-radius: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%, -50%);
+    transition: 0.3s ease, opacity 0.3s ease;
+}
+
+.ham-menu span:nth-child(1){
+    top: 25%;
+}
+
+.ham-menu span:nth-child(3){
+    top: 75%;
+}
+
+.ham-menu.active span:nth-child(1){
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+.ham-menu.active span:nth-child(2){
+    opacity: 0;
+}
+.ham-menu.active span:nth-child(3){
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+    .ul-navbar {
+        display: none;
+    }
+
+    .ham-menu {
+        display: block;
+    }
+}
+
+@media (min-width: 769px) {
+    .ham-menu {
+        display: none;
+    }
+}
+
+/* Akhir Navbar */
+
+/* Awal Content */
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    max-width: 1200px; /* Sesuaikan dengan lebar navbar */
+    margin: 0 auto;
+    padding: 0 15px;
+    margin-top: 70px;
+}
+
+.cart, .summary {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.cart {
+    width: 65%;
+}
+
+.summary {
+    width: 30%;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.cart-item img {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+}
+
+.item-details {
+    flex: 1;
+}
+
+.item-name {
+    font-weight: bold;
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+}
+
+.quantity-btn {
+    width: 30px;
+    height: 30px;
+    background-color: #ddd;
+    border: none;
+    cursor: pointer;
+}
+
+.quantity-input {
+    width: 50px;
+    text-align: center;
+    border: 1px solid #ddd;
+    margin: 0 5px;
+}
+
+.total-price {
+    font-weight: bold;
+    color: #333;
+}
+
+.summary{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.summary p {
+    margin: 10px 0;
+}
+
+.total-container {
+    margin-top: auto;
+    
+}
+
+.total {
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.order-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.order-btn:hover {
+    background-color: #218838;
+}
+
+/* Akhir Content */
